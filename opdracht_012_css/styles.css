@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lexend', sans-serif;
+    
+}
+
+body {
+    display: inline-flex;
+}
+
+.grid-container {
+    border: 1px solid #666;
+    border-radius: 5px;
+
+    margin: 10px;
+
+    width: 400px;
+    height: 200px;
+    grid-column: 1fr 1fr 1fr 1fr 1fr ;
+    grid-row: 1fr 1fr 1fr 1fr 1fr 1fr;
+    
+    grid-template-areas: 
+    "name name name name pic"
+    "status status status status status"
+    "main main main main main"
+    "main main main main main"
+    "footer footer footer footer footer "
+    "footer footer footer footer footer"
+                                     
+    ;
+}
+img {
+    grid-area: pic;
+    width: 40px;
+    height: 40px;
+    float: right;
+    margin-top: 7px;
+    margin-right: 7px; 
+}
+
+.name {
+    grid-area: name;
+    margin-top: 5px;
+    margin-left: 5px;
+    font-weight: bold;
+   
+}
+
+.status{
+    grid-area: status;
+    margin-left: 5px;
+    color: #666;
+    font-size: 0.8em;
+
+    
+}
+
+.xtra-text{
+    grid-area: main;
+    margin-left: 5px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.buttons {
+    grid-area: footer;
+    border-top: 1px solid #666;
+    justify-content: center;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+
+    
+}
+.approve {
+    border-top: 1px solid lime;
+    border-bottom: 1px solid lime;
+    border-left: 1px solid lime;
+    margin-top: 20px;
+    margin-left: 41px;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 10px 54px;
+    float: left;
+    color:lime;
+    border-radius: 5px 0px 0px 5px;
+}
+.decline {
+    border: 1px solid red;
+    margin-top: 20px;
+    margin-left: 0;
+    margin-right: 41px;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 10px 54px;
+    float: right;
+    color: red;
+    border-radius: 0px 5px 5px 0px;
+}
